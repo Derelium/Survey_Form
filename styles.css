@@ -70,10 +70,11 @@ p, fieldset{
   text-decoration: solid;
 }
 
-:hover{
-  font-weight: bold;
-  color:rgb(116, 204, 128);
-  transition: 2s;
-  
+input:hover, span:hover, legend:hover, text:hover{
+  color:rgb(3, 0, 60);
+  transition: 3s;
+  -webkit-text-stroke:1px var(--main-bg-color);
 }
-
+input, span, legend, text{
+transition: 4s;
+}

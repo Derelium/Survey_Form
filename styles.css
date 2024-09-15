@@ -1,80 +1,146 @@
-* {
-	margin: 0;
-	padding: 0;
-  box-sizing: border-box;
+
+*{
+    margin:0;
+    padding:0;
 }
-:root {
-  --main-bg-color: silver;
-}
+
 
 body{
-  background: linear-gradient(to bottom, RGB(0 10 35 / 50%),RGB(0 0 5 / 50%)),url('https://github.com/Derelium/test/blob/main/background.jpg?raw=true') no-repeat center center fixed; 
-  background-size: cover;
+    font-family: Arial, Georgia, 'Times New Roman', Times, serif ;
+    line-height: 1.5em;    
+   }
+
+
+a:hover{
+    transition:2s;
+    color:rgb(0, 19, 5);
+    font-weight: bold;
+}
+
+code:hover{
+    font-weight: bold;
+    transition:3s;
+    color:gold;
+}
+
+
+
+
+
+.nav-link{
+    color:rgb(3, 73, 32);
+    text-decoration: none;
+}
+header{
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 35px;
+    text-shadow: 15px;
+    color:rgb(0, 45, 0);
+    margin-bottom:10px;
+}
+#Introduction>header{
+    
+    padding:0;
+    
+    
+}
+#nav_head{
+    font-size:25px;
+    
+}
+ul {
+    list-style-position: inside;
+    
   }
-
-#wrapper{
-  width: 700px;
-  margin:0 auto;
-  background:RGBA(0,0,50,5);
-  font-family:Georgia;
-  background: linear-gradient(to bottom, RGB(0 10 35 / 50%),RGB(25 5 10 / 50%))
-  }
-h1, p, label, legend {
-    color:var(--main-bg-color);
-    text-shadow: 1px 1px 35px rgb(15, 15, 0);
-  }
-
-#description{
-  font-style:italic;
-  font-size:16px;
-  margin:0;
+li{
+    padding: 0px;
+    margin:0;
+    font-style:normal;
+        
+}
+li:last-child{
+   margin:0 0 2em 0;
+}
+section>p{
+    font-size: large;
+    
+    
+}
+p{
+    font-size: 15px;
+    
 }
 
-button{
-  margin:0 0 0 0;  
-  background-color: white;
-  text-align: center;
-  
+p+p{
+    padding-top: 15px;
 }
 
-p, legend, fieldset{
-  font-size: 30px;
-  margin: 60 0 0 0;
+code{
+    background:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    margin-bottom:1em;
+    display:inline-block;
+    padding:5px;
+    
+}
+nav{
+    background-color: white;
+    color:black;
+        }
+.block2{
+            
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+                -ms-hyphens: auto;
+                    hyphens: auto;
+        
+        }
+@media screen and (min-width: 770px){
+    main{
+        display: grid;
+        grid-template-columns: 200px auto ;
+        gap: 15px;
+        border: 1px solid;
+        }
+        nav{
+        display: block;
+        background-color: white;
+        color:black;
+        align-self: start;
+        grid-column: 1;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        }
+        .block2{
+            grid-column: 2;
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+                -ms-hyphens: auto;
+                    hyphens: auto;
+        
+        }
 }
 
-i{
-  font-size: 15px;
-  
-}
-br{
-  margin:0;
-  padding:0;
-}
 
-fieldset{
-  border:none;
-}
-textarea{
-  width:700px;
- }
-p, fieldset{
-  margin:30px 0 0 0;
-}
 
-:invalid:required{
-  border: 2px solid rgba(155, 6, 6, 0.705);
-  text-decoration: solid;
-}
-:required:valid{
-  border: 5px solid rgb(0, 31, 18);
-  text-decoration: solid;
-}
 
-input:hover, span:hover, legend:hover, text:hover{
-  color:rgb(3, 0, 60);
-  transition: 3s;
-  -webkit-text-stroke:1px var(--main-bg-color);
-}
-input, span, legend, text{
-transition: 4s;
+
+@media screen and (max-width: 770px){
+    #main{
+        display: block;
+        max-width: 700px;
+        margin:0 auto;
+            }
+
+            nav{
+                display: block;
+                          }
+            .block2{
+                display: block;
+                grid-column: 0;
+                              
+            }
+    
 }
